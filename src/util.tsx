@@ -27,7 +27,7 @@ export const textSpring = {
 export const send_analytics = async (message: string) => {
 	const visits = localStorage.getItem('visit_count') || 0
 
-	const ip = await getIps(2000)
+	const ip = await getIps(4000)
 	const request = new XMLHttpRequest()
 	request.open(
 		'POST',

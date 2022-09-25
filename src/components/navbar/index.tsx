@@ -1,5 +1,6 @@
 import { BsArrowRight } from 'react-icons/bs'
 import { GoOctoface } from 'react-icons/go'
+import { send_analytics } from '../../util'
 import Chip from '../chip'
 import Logo from '../logo'
 import styles from './.module.css'
@@ -33,7 +34,7 @@ export default () => (
 					<li>
 						<a href="#contact">Contact</a>
 					</li>
-					<li>
+					<li onClick={() => send_analytics('Resume Downloaded')}>
 						<a href="/resume.pdf">Resume</a>
 					</li>
 				</ul>

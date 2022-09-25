@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BsDownload, BsFilePdf } from 'react-icons/bs'
+import { send_analytics } from '../../util'
 import Chip from '../chip'
 import styles from './.module.css'
 
@@ -107,6 +108,7 @@ export default () => {
 								</>
 							}
 							link="/resume.pdf"
+							onClick={() => send_analytics('Resume Downloaded')}
 						>
 							Resume
 							<BsFilePdf />
