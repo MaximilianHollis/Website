@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: -30px;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}

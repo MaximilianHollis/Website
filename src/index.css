@@ -1,0 +1,195 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --background: #080808;
+  --white: #f8f8f8;
+  --blue: #6492c7;
+  --purple: #5e3ad8;
+  --magenta: #ff1e7a;
+  --red: #f5382b;
+  --orange: #FF5337;
+  --border: 1.6px solid #3a3a3a;
+  --primary: #1d1e1f;
+  --width: min(calc(100vw - 20px), 500px + 40vw);
+  --shadow: #64646f33 0px 7px 29px 0px;
+  --shadow-small: #64646f33 0px 7px 14px 0px;
+  --shadow-faint: 0px 7px 32px #00000052;
+  --gradient: conic-gradient(from 230.29deg at center,var(--blue) 0deg, var(--purple) 67.5deg, var(--magenta) 198.75deg,var(--red) 251.25deg,var(--orange) 301.88deg, var(--blue) 330deg);
+  /* Distance from earth to the moon (km) */
+  --distance-to-the-moon: 384400;
+  --header-height: 64px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+  color: var(--white);
+}
+
+header {
+  height: var(--header-height);
+}
+
+main {
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  background: var(--primary);
+  padding: max(8%, 64px);
+  overflow-x: clip;
+}
+
+.no_padding_top {
+  padding-top: 0;
+}
+
+section > span {
+  width: var(--width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 100ms ease 0s;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.wide {
+  width: var(--width);
+  margin: 0 auto;
+}
+
+.icon {
+  color: var(--blue);
+  font-size: 24px;
+}
+
+.divider {
+  width: 1px;
+  align-self: stretch;
+  margin: 4px 12px;
+  border: var(--border);
+  background: #3a3a3a;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--blue);
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: var(--blue);
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+h6 {
+  margin-top: .8em;
+  color: #8A8F98;
+  line-height: 1.45;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.4;
+  color: #8A8F98;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 768px){
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+  
+  h3 {
+    font-size: 2.8rem;
+  }
+  
+  h4 {
+    font-size: 1.6rem;
+  }
+  
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+

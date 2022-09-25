@@ -1,0 +1,22 @@
+{
+  "extends": "lemon/tsx",
+  "plugins": ["unused-imports"],
+  "rules": {
+    "import/no-unresolved": "off",
+    "camelcase": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "no-unused-vars": "off", 
+    "@typescript-eslint/no-unused-vars": "off",
+		"unused-imports/no-unused-imports": "warn",
+		"unused-imports/no-unused-vars": [
+			"warn",
+			{ "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+		],
+    "react/jsx-filename-extension": "off",
+    "quotes": ["off", "single"],
+    "complexity": "off",
+    "react/function-component-definition": "off",
+    "prefer-arrow/prefer-arrow-functions": "off",
+    "no-nested-ternary": "off"
+  }
+}

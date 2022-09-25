@@ -1,0 +1,42 @@
+{
+  "name": "website",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "author": {
+    "name": "Maximilian Hollis",
+    "email": "contact@maxjs.dev",
+    "url": "https://maxjs.dev"
+  },
+  "description": "My personal website",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaximilianHollis/Website"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "yarn build && vite preview"
+  },
+  "dependencies": {
+    "devtools-detect": "^4.0.0",
+    "framer-motion": "^7.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-qr-code": "^2.0.8",
+    "react-use": "^17.4.0",
+    "zustand": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "eslint-config-lemon": "^0.6.59",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vite-plugin-image-presets": "^0.3.2",
+    "vite-plugin-imagemin": "^0.6.1"
+  }
+}

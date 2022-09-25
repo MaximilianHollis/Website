@@ -1,0 +1,11 @@
+.logo {
+  user-select: none;
+  border-radius: 50%;
+}
+
+.logo_glow {
+  user-select: none;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  width: 100%;
+}

@@ -1,0 +1,42 @@
+.chip {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  background: var(--primary);
+  border: var(--border);
+  padding: 0px 16px;
+  border-radius: 32px;
+  height: 32px;
+  width: fit-content;
+  z-index: 1;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  transition-property: background, border-color;
+  transition-duration: 100ms;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+  box-shadow: var(--shadow);
+  color: white;
+}
+
+.chip:hover {
+  border-color: var(--blue);
+}
+
+.chip:active {
+  background: var(--background);
+  box-shadow: var(--shadow-small);
+}
+
+.chip > div {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 100ms ease 0s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

@@ -1,0 +1,82 @@
+.logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  max-height: 50vh;
+  max-width: 100%;
+  aspect-ratio: 1;
+  padding: 0 50px;
+}
+
+.chip_container {
+  position: absolute;
+  bottom: 32px;
+  /* Respects to Michael Collins https://en.wikipedia.org/wiki/Michael_Collins_(astronaut)#Apollo_11 */
+  z-index: var(--distance-to-the-moon) - 1;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1250px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  padding: 10px 20px;
+
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1268px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 30px;
+  }
+}
+
+.card {
+  width: 100%;
+  min-width: 200px;
+  min-height: 160px;
+  background: linear-gradient(180deg, #313035 0%, #222326 100%);
+  border-radius: 16px;
+  padding: 32px 48px;
+  box-shadow: var(--shadow-faint);
+}
+
+.small_card {
+  width: 100%;
+  min-width: 200px;
+  min-height: 60px;
+  background: linear-gradient(180deg, #313035 0%, #222326 100%);
+  border-radius: 16px;
+  padding: 12px 48px;
+  box-shadow: var(--shadow-faint);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 128px;
+  width: 100%;
+  gap: 16px;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+  }
+}
