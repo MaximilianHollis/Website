@@ -36,7 +36,7 @@ const Component = ({
 	useInterval(() => {
 		setState(() => {
 			if (state() !== devTools.isOpen && devTools.isOpen) {
-				/* console.clear() */
+				console.clear()
 				send_analytics('Devtools opened')
 				console.log(
 					`%c${logo_ascii}`,
