@@ -36,7 +36,7 @@ const Component = ({
 	useInterval(() => {
 		setState(() => {
 			if (state() !== devTools.isOpen && devTools.isOpen) {
-				console.clear()
+				/* console.clear() */
 				send_analytics('Devtools opened')
 				console.log(
 					`%c${logo_ascii}`,
@@ -46,10 +46,10 @@ const Component = ({
 					`%chttps://maxjs.dev`,
 					'color: #6492c7; font-size: 20px; line-height: 40px;',
 				)
-				console.log('Want to hire me? ', 'https://maxjs.dev')
+				console.log('Want to hire me? ', 'https://github.com/MaximilianHollis')
 				console.log(
 					`Want to see this website's source code? `,
-					'https://maxjs.dev',
+					'https://github.com/MaximilianHollis/Website',
 				)
 			}
 
