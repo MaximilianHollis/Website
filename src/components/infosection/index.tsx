@@ -1,6 +1,6 @@
 import { m } from 'framer-motion'
 import { TbClick } from 'react-icons/tb'
-import { textSpring } from '../../util'
+import { textSpring } from '../../data/animations'
 import Chip from '../chip'
 import Image from '../image'
 import styles from './.module.css'

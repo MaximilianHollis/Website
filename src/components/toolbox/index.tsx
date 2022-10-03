@@ -1,8 +1,9 @@
 import { m, useScroll } from 'framer-motion'
 import { Fragment, useRef } from 'react'
-import { textSpring, useParallax } from '../../util'
+import { useParallax } from '../../util'
 import styles from './.module.css'
 import Image from '../image'
+import { textSpring } from '../../data/animations'
 
 interface Item {
 	icons: JSX.Element[]

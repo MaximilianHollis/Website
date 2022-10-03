@@ -1,0 +1,10 @@
+.wrapper {
+	all: unset;
+	position: fixed;
+	bottom: 32px;
+	z-index: 999999999999;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

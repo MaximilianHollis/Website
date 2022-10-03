@@ -8,7 +8,7 @@ export default ({
 	onClick,
 }: {
 	children: ReactNode
-	prompt: ReactNode
+	prompt?: ReactNode
 	link?: string
 	onClick?: () => void
 }) => (
@@ -16,7 +16,7 @@ export default ({
 		className={styles.chip}
 		role="button"
 		tabIndex={0}
-		href={link || '/#'}
+		href={link}
 		onClick={onClick}
 	>
 		<span
@@ -29,7 +29,12 @@ export default ({
 		>
 			{children}
 		</span>
-		<div className="divider" />
-		<div>{prompt}</div>
+		{prompt && (
+			<>
+				{' '}
+				<div className="divider" />
+				<div>{prompt}</div>
+			</>
+		)}
 	</a>
 )

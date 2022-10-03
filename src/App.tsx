@@ -11,36 +11,13 @@ import skills from './data/skills'
 import Infosection from './components/infosection'
 import Toolbox from './components/toolbox'
 import fetchMonitors from './data/projects/fetch-monitors'
-import { spring } from './data/animations'
+import { scrollChip } from './data/animations'
 import etherealUi from './data/projects/ethereal-ui'
 import platinumLabs from './data/projects/platinum-labs'
 import Contact from './components/contact'
-import { send_analytics } from './util'
+import { referrer, send_analytics } from './util'
 import Separator from './components/separator'
-
-export const scrollChip = {
-	initial: {
-		opacity: 0,
-		y: 60,
-		scale: 1,
-		transition: spring,
-	},
-	animate: {
-		opacity: 1,
-		y: 0,
-		scale: 1,
-		transition: {
-			...spring,
-			delay: 3,
-		},
-	},
-	exit: {
-		opacity: 0,
-		y: 0,
-		scale: 1.1,
-		transition: spring,
-	},
-}
+import Fab from './components/fab/fab'
 
 localStorage.setItem(
 	'visit_count',
@@ -48,9 +25,7 @@ localStorage.setItem(
 )
 
 // Check url tags
-send_analytics(
-	`Page loaded, referrer:  __${location.search.split('?from=')[1] || 'n/a'}__`,
-)
+send_analytics(`Page loaded, referrer:  __${referrer || 'n/a'}__`)
 
 export default () => {
 	const skillsRef = useRef<HTMLDivElement>(null)
@@ -109,7 +84,7 @@ export default () => {
 				<span>
 					<h3 style={{ maxWidth: 'min(600px, 70vw)' }}>Skill Summary</h3>
 					<h6 style={{ maxWidth: 'min(600px, 70vw)', textAlign: 'center' }}>
-						A bunch of things I&apos;m good at in no apparent order
+						A list of many of the important technologies I&apos;m familiar with.
 					</h6>
 					<div className={styles.grid}>
 						{skills.map(({ name, description, icon }) => (
@@ -134,7 +109,7 @@ export default () => {
 			<Toolbox noPaddingTop {...etherealUi.toolbox} />
 			<Infosection black right={width > 1000} {...platinumLabs} />
 			<Toolbox noPaddingTop {...platinumLabs.toolbox} />
-
+			<Fab />
 			<Contact />
 			<div className={styles.footer}>
 				Made with ❤️ by Maximilian Hollis
