@@ -37,7 +37,7 @@ export default {
 				image: '/ethereal2/table.png',
 				name: 'Sparks joy',
 				description:
-					'Built with React TypeScript, Styled Components, and Framer motion, Ethereal2 leverages the power of animation to delight users.',
+					'Built with React TypeScript, Styled Components, and Framer Motion, Ethereal2 leverages the power of animation to delight users.',
 			},
 			{
 				icons: [
@@ -59,7 +59,7 @@ export default {
 				],
 				name: 'Developers Developers Developers',
 				description:
-					'Ethereal2 Empowers developers to build beautiful, performant, and accessible applications.',
+					'Ethereal2 empowers developers to build beautiful, performant, and accessible applications.',
 			},
 		],
 	},

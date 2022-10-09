@@ -51,7 +51,7 @@ export default {
 					<SiDiscord size={50} />,
 				],
 				name: 'Discord Integrations',
-				description: `At the heart of Platinum's community is the discord server, users can interact with Platinum services through discord.`,
+				description: `At the heart of Platinum's community is the Discord server, users can interact with Platinum services through Discord.`,
 			},
 		],
 	},

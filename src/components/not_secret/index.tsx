@@ -24,8 +24,10 @@ const Component = ({
 	onClose,
 	open,
 	score,
+	setInfinity,
 }: {
 	onClose: VoidFunction
+	setInfinity: VoidFunction
 	open: boolean
 	score: number
 }) => {
@@ -101,6 +103,15 @@ const Component = ({
 						>
 							Your clicks per second was: {score}
 						</p>
+						<button
+							type="button"
+							onClick={() => {
+								setInfinity()
+								onClose()
+							}}
+						>
+							Toggle infinite repeat log?
+						</button>
 					</m.div>
 				</m.div>
 			)}
@@ -112,12 +123,19 @@ export default ({
 	onClose,
 	open,
 	score,
+	setInfinity,
 }: {
 	onClose: VoidFunction
+	setInfinity: VoidFunction
 	open: boolean
 	score: number
 }) =>
 	createPortal(
-		<Component open={open} score={score} onClose={onClose} />,
+		<Component
+			open={open}
+			score={score}
+			setInfinity={setInfinity}
+			onClose={onClose}
+		/>,
 		document.body,
 	)

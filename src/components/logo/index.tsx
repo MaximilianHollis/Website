@@ -16,6 +16,7 @@ export default ({
 }) => {
 	const [ref, { width }] = useMeasure<HTMLDivElement>()
 	const [state, setState] = useState(true)
+	const [infinity, setInfinity] = useState(false)
 	const { y } = useWindowScroll()
 	const pathLength = useSpring(0, spring)
 	const [modal, setModal] = useState(false)
@@ -98,7 +99,12 @@ export default ({
 						</>
 					) : (
 						<>
-							<Cps open={modal} score={score} onClose={() => setModal(false)} />
+							<Cps
+								open={modal}
+								score={score}
+								setInfinity={() => setInfinity(!infinity)}
+								onClose={() => setModal(false)}
+							/>
 							<m.path
 								stroke={color}
 								strokeWidth={2}
@@ -108,6 +114,9 @@ export default ({
 								transition={{
 									duration: 3,
 									ease: 'easeInOut',
+									repeat: infinity ? Infinity : 0,
+									repeatType: 'mirror',
+									repeatDelay: 2,
 								}}
 							/>
 							<m.path
@@ -122,6 +131,9 @@ export default ({
 									delay: 1,
 									duration: 2,
 									ease: 'easeInOut',
+									repeat: infinity ? Infinity : 0,
+									repeatType: 'mirror',
+									repeatDelay: 3,
 								}}
 							/>
 						</>
