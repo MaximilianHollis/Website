@@ -9,9 +9,6 @@ function is_ipv4(d) {
 function is_ipv6(d) {
 	return regex_v6.test(d)
 }
-
-const simpleIPRegex =
-	/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g
 const regex_v4 =
 	/((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])/
 const regex_v6 =

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { send_analytics } from '../../util'
 import styles from './index.module.css'
 
 export default ({
@@ -17,6 +18,7 @@ export default ({
 		role="button"
 		tabIndex={0}
 		href={link}
+		onPointerOver={() => send_analytics(`Hovered over chip: ${prompt}`)}
 		onClick={onClick}
 	>
 		<span

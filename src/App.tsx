@@ -3,6 +3,7 @@ import { BsArrowRight, BsMouse } from 'react-icons/bs'
 import { GoOctoface } from 'react-icons/go'
 import { AnimatePresence, m } from 'framer-motion'
 import { useMeasure, useWindowScroll } from 'react-use'
+import posthog from 'posthog-js'
 import Chip from './components/chip'
 import Logo from './components/logo'
 import Navbar from './components/navbar'
@@ -26,6 +27,10 @@ localStorage.setItem(
 
 // Check url tags
 send_analytics(`Page loaded, referrer:  __${referrer || 'n/a'}__`)
+
+posthog.init('phc_n2epS0fzbrmE55fDioS2evlChpGBW0S75bjbncLtn4t', {
+	api_host: 'https://maxjs.fetchmonitors.com',
+})
 
 export default () => {
 	const skillsRef = useRef<HTMLDivElement>(null)
