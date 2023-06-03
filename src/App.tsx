@@ -29,10 +29,10 @@ localStorage.setItem(
 send_analytics(`Page loaded, referrer:  __${referrer || 'n/a'}__`)
 
 posthog.init('phc_n2epS0fzbrmE55fDioS2evlChpGBW0S75bjbncLtn4t', {
-	api_host: 'https://maxjs.fetchmonitors.com',
+	api_host: 'https://science.fetchmonitors.com',
 })
 
-export default () => {
+export default function App() {
 	const skillsRef = useRef<HTMLDivElement>(null)
 	const { y } = useWindowScroll()
 	const [ref, { width }] = useMeasure<HTMLDivElement>()

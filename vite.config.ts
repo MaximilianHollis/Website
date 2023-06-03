@@ -5,7 +5,9 @@ import imagePresets, { widthPreset } from 'vite-plugin-image-presets'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), 
+  plugins: [ react({
+    include: "**/*.tsx",
+  }),
   imagePresets({
     thumbnail: widthPreset({
       class: 'img thumb',
@@ -34,7 +36,7 @@ export default defineConfig({
       speed: 4,
     },
     webp:{
-      quality: 20,       
+      quality: 20,
     },
     svgo: {
       plugins: [

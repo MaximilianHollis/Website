@@ -54,10 +54,9 @@
 .small_card {
   width: 100%;
   min-width: 200px;
-  min-height: 60px;
   background: linear-gradient(180deg, #313035 0%, #222326 100%);
   border-radius: 16px;
-  padding: 12px 48px;
+  padding: 0px 48px;
   box-shadow: var(--shadow-faint);
   display: flex;
   align-items: center;
