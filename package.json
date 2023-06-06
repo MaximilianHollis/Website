@@ -36,7 +36,7 @@
     "@vitejs/plugin-react": "^2.0.0",
     "eslint-config-lemon": "^0.6.59",
     "typescript": "^4.6.4",
-    "vite": "^3.0.0",
+    "vite": "^3.2.7",
     "vite-plugin-image-presets": "^0.3.2",
     "vite-plugin-imagemin": "^0.6.1"
   }
