@@ -3,8 +3,9 @@ import { useState } from 'react'
 import { BsArrowRight, BsStarFill } from 'react-icons/bs'
 import { TbClick } from 'react-icons/tb'
 import { useWindowScroll } from 'react-use'
+import { posthog } from 'posthog-js'
 import { scrollChip } from '../../data/animations'
-import { referrer, send_analytics } from '../../util'
+import { referrer } from '../../util'
 import Chip from '../chip'
 import styles from './.module.css'
 
@@ -41,7 +42,7 @@ export default () => {
 							}
 							onClick={() => {
 								localStorage.setItem('starred', 'true')
-								send_analytics('starred')
+								posthog.capture('starred')
 								setShowTy(false)
 							}}
 						>
