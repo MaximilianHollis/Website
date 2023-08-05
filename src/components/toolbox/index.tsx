@@ -129,8 +129,10 @@ export default ({
 					viewport={{ once: true, amount: 0.4 }}
 					transition={{ ...textSpring, delay: 0 }}
 				>
-					<h3 style={{ textAlign: 'left' }}>{title}</h3>
-					<h6 style={{ maxWidth: '800px' }}>{desc}</h6>
+					<h3 className="h3" style={{ textAlign: 'left' }}>
+						{title}
+					</h3>
+					<h6 className="h6" style={{ maxWidth: '800px' }}>{desc}</h6>
 				</m.div>
 				<div className={styles.grid}>
 					{big_items.map((props, i) => (

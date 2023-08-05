@@ -81,9 +81,9 @@ const Component = ({
 						<button className={styles.close} type="button" onClick={onClose}>
 							<RiCloseLine size={20} />
 						</button>
-						<h4>Secret Menu no. 1</h4>
+						<h4 className="h4">Secret Menu no. 1</h4>
 
-						<h5>{code.title}</h5>
+						<h5 className="h5">{code.title}</h5>
 						<div className={styles.qr}>
 							<QRCode value={code.url} />
 						</div>
