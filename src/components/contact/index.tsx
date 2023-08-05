@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BsDownload, BsFilePdf } from 'react-icons/bs'
-import { send_analytics } from '../../util'
+import { posthog } from 'posthog-js'
 import Chip from '../chip'
 import styles from './.module.css'
 
@@ -12,6 +12,7 @@ export default () => {
 			<div className={styles.container}>
 				<div className={styles.left} id="contact">
 					<h3
+						className="h3"
 						style={{
 							margin: 0,
 						}}
@@ -24,25 +25,19 @@ export default () => {
 							contact@maxjs.dev
 						</a>
 					</p>
-					<h5 style={{ marginTop: '36px' }}>Send me a message</h5>
+					<h5 className="h5" style={{ marginTop: '36px' }}>
+						Send me a message
+					</h5>
 					<form
 						className={styles.form}
 						onSubmit={(e) => {
-							const request = new XMLHttpRequest()
-							request.open(
-								'POST',
-								'https://discord.com/api/webhooks/1019611966249107497/QJ8d_MNF8xjW98jtr6gV1N4_BOq9915jKbnLc8S-uffshmwSNohkEf6uhpSYR-Dg47G0',
-							)
-
-							request.setRequestHeader('Content-type', 'application/json')
-
+							e.preventDefault()
 							const params = {
 								username: email,
 								content: msg,
 							}
-
-							request.send(JSON.stringify(params))
-							e.preventDefault()
+							posthog.identify(email)
+							posthog.capture('Contacted', params)
 						}}
 					>
 						<input
@@ -61,8 +56,9 @@ export default () => {
 				</div>
 
 				<div className={styles.right}>
-					<h4>Resume</h4>
+					<h4 className="h4">Resume</h4>
 					<h5
+						className="h5"
 						style={{
 							marginBottom: '10px',
 						}}
@@ -108,7 +104,7 @@ export default () => {
 								</>
 							}
 							link="/resume.pdf"
-							onClick={() => send_analytics('Resume Downloaded')}
+							onClick={() => posthog.capture('Resume Downloaded')}
 						>
 							Resume
 							<BsFilePdf />

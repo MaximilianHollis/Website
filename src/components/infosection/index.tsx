@@ -44,9 +44,9 @@ export default ({
 					viewport={{ once: true, amount: 0.4 }}
 					transition={textSpring}
 				>
-					<h3>{name}</h3>
-					<h4>{role}</h4>
-					<h6>{description}</h6>
+					<h3 className="h3">{name}</h3>
+					<h4 className="h4">{role}</h4>
+					<h6 className="h6">{description}</h6>
 				</m.span>
 
 				<m.span

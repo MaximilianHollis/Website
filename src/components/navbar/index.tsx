@@ -1,6 +1,5 @@
-import { BsArrowRight } from 'react-icons/bs'
-import { GoOctoface } from 'react-icons/go'
-import { send_analytics } from '../../util'
+import { BsArrowRight, BsGithub } from 'react-icons/bs'
+import { posthog } from 'posthog-js'
 import Chip from '../chip'
 import Logo from '../logo'
 import styles from './.module.css'
@@ -34,7 +33,7 @@ export default () => (
 					<li>
 						<a href="#contact">Contact</a>
 					</li>
-					<li onClick={() => send_analytics('Resume Downloaded')}>
+					<li onClick={() => posthog.capture('Resume Downloaded')}>
 						<a href="/resume.pdf">Resume</a>
 					</li>
 				</ul>
@@ -49,7 +48,7 @@ export default () => (
 					}
 					link="https://github.com/MaximilianHollis"
 				>
-					<GoOctoface /> Github
+					<BsGithub /> Github
 				</Chip>
 			</div>
 		</div>

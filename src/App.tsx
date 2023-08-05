@@ -1,6 +1,5 @@
 import { useRef } from 'react'
-import { BsArrowRight, BsMouse } from 'react-icons/bs'
-import { GoOctoface } from 'react-icons/go'
+import { BsArrowRight, BsGithub, BsMouse } from 'react-icons/bs'
 import { AnimatePresence, m } from 'framer-motion'
 import { useMeasure, useWindowScroll } from 'react-use'
 import posthog from 'posthog-js'
@@ -16,7 +15,6 @@ import { scrollChip } from './data/animations'
 import etherealUi from './data/projects/ethereal-ui'
 import platinumLabs from './data/projects/platinum-labs'
 import Contact from './components/contact'
-import { referrer, send_analytics } from './util'
 import Separator from './components/separator'
 import Fab from './components/fab/fab'
 
@@ -25,11 +23,9 @@ localStorage.setItem(
 	(parseInt(localStorage.getItem('visit_count') || '0', 10) + 1).toString(),
 )
 
-// Check url tags
-send_analytics(`Page loaded, referrer:  __${referrer || 'n/a'}__`)
-
 posthog.init('phc_n2epS0fzbrmE55fDioS2evlChpGBW0S75bjbncLtn4t', {
 	api_host: 'https://science.fetchmonitors.com',
+	opt_in_site_apps: true,
 })
 
 export default function App() {
@@ -87,8 +83,13 @@ export default function App() {
 			</main>
 			<m.section ref={skillsRef} id="skills">
 				<span>
-					<h3 style={{ maxWidth: 'min(600px, 70vw)' }}>Skill Summary</h3>
-					<h6 style={{ maxWidth: 'min(600px, 70vw)', textAlign: 'center' }}>
+					<h3 className="h3" style={{ maxWidth: 'min(600px, 70vw)' }}>
+						Skill Summary
+					</h3>
+					<h6
+						className="h6"
+						style={{ maxWidth: 'min(600px, 70vw)', textAlign: 'center' }}
+					>
 						A list of many of the important technologies I&apos;m familiar with.
 					</h6>
 					<div className={styles.grid}>
@@ -98,7 +99,7 @@ export default function App() {
 								className={description ? styles.card : styles.small_card}
 							>
 								<span className="icon">{icon}</span>
-								<h5>{name}</h5>
+								<h5 className="h5">{name}</h5>
 								<p>{description}</p>
 							</div>
 						))}
@@ -106,7 +107,9 @@ export default function App() {
 				</span>
 			</m.section>
 			<Separator>
-				<h3 id="projects">Projects</h3>
+				<h3 className="h3" id="projects">
+					Projects
+				</h3>
 			</Separator>
 			<Infosection black left={width > 1000} {...fetchMonitors} />
 			<Toolbox noPaddingTop {...fetchMonitors.toolbox} />
@@ -127,7 +130,7 @@ export default function App() {
 					}
 					link="https://github.com/MaximilianHollis/Website"
 				>
-					Source on <GoOctoface /> Github
+					Source on <BsGithub /> Github
 				</Chip>
 			</div>
 		</div>
