@@ -19,7 +19,7 @@ export default {
 	role: 'Full Stack Developer',
 	description:
 		'Premium group and software for gaining insights into tech, products, social media, and more.',
-	link: 'https://fetchmonitors.com',
+	link: 'https://fetchmonitors.com/?from=maxjs',
 	image: '/fetch-monitors/fetch_landing.webp',
 	toolbox: {
 		title: 'Tech Stack',
