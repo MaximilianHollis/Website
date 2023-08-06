@@ -83,8 +83,9 @@ export default () => {
 						}}
 					>
 						<li>
-							Tech lead, Fetch Monitors: <i>September 2020 - Present</i>
-							<p>Coordinated development across all aspects of...</p>
+							Full Stack Developer, Fetch Monitors:{' '}
+							<i>September 2020 - Present</i>
+							<p>Developed responsive and efficient webapps...</p>
 						</li>
 					</ul>
 					<br />

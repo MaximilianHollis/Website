@@ -16,7 +16,7 @@ import { TbBrandNextjs } from 'react-icons/tb'
 
 export default {
 	name: 'Fetch Monitors',
-	role: 'Founder, Tech Lead',
+	role: 'Full Stack Developer',
 	description:
 		'Premium group and software for gaining insights into tech, products, social media, and more.',
 	link: 'https://fetchmonitors.com',
