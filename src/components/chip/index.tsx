@@ -8,16 +8,18 @@ export default ({
 	link,
 	onClick,
 }: {
-	children: ReactNode
-	prompt?: ReactNode
-	link?: string
-	onClick?: () => void
+	readonly children: ReactNode
+	readonly prompt?: ReactNode
+	readonly link?: string
+	readonly onClick?: () => void
 }) => (
 	<a
 		className={styles.chip}
 		role="button"
 		tabIndex={0}
+		target="_blank"
 		href={link}
+		rel="noreferrer"
 		onPointerOver={() => send_analytics(`Hovered over chip: ${prompt}`)}
 		onClick={onClick}
 	>
