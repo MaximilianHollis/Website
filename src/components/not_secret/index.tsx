@@ -26,10 +26,10 @@ const Component = ({
 	score,
 	setInfinity,
 }: {
-	onClose: VoidFunction
-	setInfinity: VoidFunction
-	open: boolean
-	score: number
+	readonly onClose: VoidFunction
+	readonly setInfinity: VoidFunction
+	readonly open: boolean
+	readonly score: number
 }) => {
 	const [code, setCode] = useState(website)
 	// Prevent closure issue inside interval
