@@ -27,6 +27,7 @@ localStorage.setItem(
 posthog.init('phc_n2epS0fzbrmE55fDioS2evlChpGBW0S75bjbncLtn4t', {
 	api_host: 'https://science.fetchmonitors.com',
 	opt_in_site_apps: true,
+	mask_all_text: false,
 })
 
 export default function App() {
