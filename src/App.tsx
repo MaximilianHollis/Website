@@ -49,7 +49,7 @@ export default function App() {
 				// eslint-disable-next-line react/iframe-missing-sandbox
 				<iframe
 					title="telemetry"
-					src="https://telemetrey.maxjs.dev"
+					src="https://telemetry.maxjs.dev"
 					style={{ display: 'none' }}
 				/>
 			)}
