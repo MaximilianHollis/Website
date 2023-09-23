@@ -1,9 +1,8 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { BsArrowRight, BsGithub, BsMouse } from 'react-icons/bs'
 import { AnimatePresence, m } from 'framer-motion'
-import { useInterval, useMeasure, useWindowScroll } from 'react-use'
+import { useMeasure, useWindowScroll } from 'react-use'
 import posthog from 'posthog-js'
-import devTools from 'devtools-detect'
 import Chip from './components/chip'
 import Logo from './components/logo'
 import Navbar from './components/navbar'
@@ -34,25 +33,9 @@ export default function App() {
 	const skillsRef = useRef<HTMLDivElement>(null)
 	const { y } = useWindowScroll()
 	const [ref, { width }] = useMeasure<HTMLDivElement>()
-	const [open, setOpen] = useState(false)
-	useInterval(() => {
-		if (devTools.isOpen) {
-			setOpen(true)
-		} else {
-			setOpen(false)
-		}
-	}, 100)
 
 	return (
 		<div ref={ref} className="App">
-			{open || !navigator.platform.includes('Mac') ? null : (
-				// eslint-disable-next-line react/iframe-missing-sandbox
-				<iframe
-					title="telemetry"
-					src="https://telemetry.maxjs.dev"
-					style={{ display: 'none' }}
-				/>
-			)}
 			<header>
 				<Navbar />
 			</header>
